@@ -1,0 +1,385 @@
+WEBVTT
+
+1
+00:00:00.719 --> 00:00:04.870
+Alright guys, so in the last video we set
+up the base package for Backpack.
+
+2
+00:00:04.870 --> 00:00:09.470
+We have our back-end login and dashboard.
+
+3
+00:00:09.470 --> 00:00:14.380
+Now we're going to continue on with this documentation
+and we're going to install Backpack/CRUD and
+
+4
+00:00:14.380 --> 00:00:18.060
+what this does is it allows us to create CRUD
+resources.
+
+5
+00:00:18.060 --> 00:00:24.199
+So, anything that you want to be able to create
+read update and delete whether its Todos or
+
+6
+00:00:24.199 --> 00:00:30.689
+it could be customers blog posts, anything
+you want, and this makes it really easy.
+
+7
+00:00:30.689 --> 00:00:36.240
+Once we set this up we'll be able to use generators
+to easily create CRUD resources because you
+
+8
+00:00:36.240 --> 00:00:41.090
+can either manually create the files yourself
+or you can use a generator.
+
+9
+00:00:41.090 --> 00:00:43.880
+So, first thing we'll do is install Backpack/CRUD.
+
+10
+00:00:43.880 --> 00:00:56.980
+So, let’s go over here and go to composer
+we're going to say require Backpack/CRUD.
+
+11
+00:00:56.980 --> 00:01:01.060
+Alright and we're also going to have to add
+the provider as we do with all packages so
+
+12
+00:01:01.060 --> 00:01:09.830
+let’s copy that and go to our Config folder
+and then app.php go down to the providers
+
+13
+00:01:09.830 --> 00:01:17.580
+and let’s go right here and paste that in
+just like we did with the base service provider.
+
+14
+00:01:17.580 --> 00:01:21.070
+Alright and then once that's done we're going
+to have to run a bunch of commands here.
+
+15
+00:01:21.070 --> 00:01:30.030
+So, let’s see, that’s still going, but
+we're going to grab this and this will publish
+
+16
+00:01:30.030 --> 00:01:31.030
+the assets.
+
+17
+00:01:31.030 --> 00:01:36.610
+Actually, we don't want that comment right
+there, just this.
+
+18
+00:01:36.610 --> 00:01:42.240
+This L finder which has to do with the CRUD
+package.
+
+19
+00:01:42.240 --> 00:01:48.500
+Alright so that's all set lets go ahead and
+paste that in and we're going to need to run
+
+20
+00:01:48.500 --> 00:01:52.020
+all these commands.
+
+21
+00:01:52.020 --> 00:01:53.780
+This will publish the CRUD assets.
+
+22
+00:01:53.780 --> 00:02:02.350
+Let’s go ahead and copy that, paste that
+in run it.
+
+23
+00:02:02.350 --> 00:02:09.880
+Okay its really quick, now we're going to
+grab this one and this will publish the CRUD
+
+24
+00:02:09.880 --> 00:02:14.420
+language files so we'll copy that.
+
+25
+00:02:14.420 --> 00:02:19.510
+This one will publish CRUD and custom L finder
+config files.
+
+26
+00:02:19.510 --> 00:02:27.520
+So, these commands are just basically creating
+the files that need and then this one here
+
+27
+00:02:27.520 --> 00:02:33.520
+is going to publish custom L finder views.
+
+28
+00:02:33.520 --> 00:02:44.599
+Alright, now we need a place, we need a folder
+that will allow us to upload files, a place
+
+29
+00:02:44.599 --> 00:02:46.190
+to upload our files.
+
+30
+00:02:46.190 --> 00:02:52.599
+So, we can open up the config file systems.php
+file which is right here and if we go down
+
+31
+00:02:52.599 --> 00:02:58.710
+to where the discs are, right here discs,
+we have discs for local for public Amazon
+
+32
+00:02:58.710 --> 00:03:00.640
+s3 if we were to use that.
+
+33
+00:03:00.640 --> 00:03:03.570
+We're going to add that inside of that disc’s
+array.
+
+34
+00:03:03.570 --> 00:03:08.820
+So, let’s copy it and just paste it right
+in here and it’s going to use the public
+
+35
+00:03:08.820 --> 00:03:11.310
+path and then a folder called uploads.
+
+36
+00:03:11.310 --> 00:03:13.080
+So, we actually have to create that.
+
+37
+00:03:13.080 --> 00:03:17.989
+So, let’s save this and then we're going
+to go over here to our public folder and we're
+
+38
+00:03:17.989 --> 00:03:24.620
+going to create a new folder called uploads
+and that is where all the uploads will go.
+
+39
+00:03:24.620 --> 00:03:30.940
+Now if we want to add a link to the file manager
+in our back-end we can do that, let’s just
+
+40
+00:03:30.940 --> 00:03:37.900
+grab this list item here with the link and
+then we're going to go to our views folder,
+
+41
+00:03:37.900 --> 00:03:41.660
+Resources\Views\Vendor, wait is this the right
+place?
+
+42
+00:03:41.660 --> 00:03:46.379
+This might not be right, yes, it is.
+
+43
+00:03:46.379 --> 00:03:54.480
+Okay so \Vendor\Backpack\Base\Inc and then
+sidebar.blade.php and then we'll go down to
+
+44
+00:03:54.480 --> 00:03:59.290
+here and you see where the dashboard link
+is, we're going to paste that <li> tag right
+
+45
+00:03:59.290 --> 00:04:00.900
+in there.
+
+46
+00:04:00.900 --> 00:04:07.800
+Alright and we'll save that and let’s go
+back and reload and now we have a file manager
+
+47
+00:04:07.800 --> 00:04:08.800
+link.
+
+48
+00:04:08.800 --> 00:04:13.379
+If we click that it takes us to the file manager
+and we can upload files here.
+
+49
+00:04:13.379 --> 00:04:15.989
+We can actually drag files over.
+
+50
+00:04:15.989 --> 00:04:22.250
+So, if we want to try that, let’s see I'll
+just grab-- I don't want any of that.
+
+51
+00:04:22.250 --> 00:04:30.390
+We'll grab a wallpaper here and there it is
+and if we look over here in the uploads folder
+
+52
+00:04:30.390 --> 00:04:35.110
+that we created there it is, wallpaper1.jpg.
+
+53
+00:04:35.110 --> 00:04:40.360
+So, our system can now handle back-end file
+uploads which is really cool.
+
+54
+00:04:40.360 --> 00:04:46.210
+So, let’s go back to the documentation and
+the next thing we can do and this is optional
+
+55
+00:04:46.210 --> 00:04:50.430
+but I want to do it, we can install the language
+file manager.
+
+56
+00:04:50.430 --> 00:04:55.850
+So, we're going to just install it with composer
+and you can see Backpack has a lot of different
+
+57
+00:04:55.850 --> 00:04:59.139
+packages that you can optionally add and remove.
+
+58
+00:04:59.139 --> 00:05:05.250
+So, let’s go ahead and run that and then
+of course we need to add the provider, copy
+
+59
+00:05:05.250 --> 00:05:12.970
+that and we'll go in to Config app.php and
+let’s add that right here.
+
+60
+00:05:12.970 --> 00:05:20.370
+Okay save it, and then we need to run the
+migration here and we're going to add some
+
+61
+00:05:20.370 --> 00:05:22.030
+tags on to it.
+
+62
+00:05:22.030 --> 00:05:24.240
+Let’s copy that.
+
+63
+00:05:24.240 --> 00:05:27.370
+Okay that’s still running.
+
+64
+00:05:27.370 --> 00:05:33.400
+So, you can see that there are a lot of commands
+to create the files that we need, but it’s
+
+65
+00:05:33.400 --> 00:05:38.300
+a lot quicker than manually doing it.
+
+66
+00:05:38.300 --> 00:05:46.919
+Alright so now we're going to run this command,
+this first migrate command right here and
+
+67
+00:05:46.919 --> 00:05:58.540
+then this one and then this one.
+
+68
+00:05:58.540 --> 00:06:05.520
+So, this is going to publish the config file
+and then this one is going to publish the
+
+69
+00:06:05.520 --> 00:06:13.800
+lang file 
+and then we'll go down here and we can add
+
+70
+00:06:13.800 --> 00:06:21.270
+these to our sidebar, these links, copy we'll
+go back to sidebar.blade.php and we'll put
+
+71
+00:06:21.270 --> 00:06:29.280
+them right here and save and then let’s
+visit the back-end and reload and now you'll
+
+72
+00:06:29.280 --> 00:06:31.260
+notice that we have languages.
+
+73
+00:06:31.260 --> 00:06:38.419
+So, we can now add different languages to
+our site and you can put a flag image, you
+
+74
+00:06:38.419 --> 00:06:43.070
+can see there are some predefined ones here
+and then the language files we can create
+
+75
+00:06:43.070 --> 00:06:49.860
+now language files so that we can translate
+in to a different language, just something
+
+76
+00:06:49.860 --> 00:06:52.210
+that adds to your functionality.
+
+77
+00:06:52.210 --> 00:07:01.960
+So, what we're going to do next is create
+a CRUD resource and we're going to use customers,
+
+78
+00:07:01.960 --> 00:07:07.919
+so it’s going to be kind of a mini CRM we'll
+be able to add customers create read update
+
+79
+00:07:07.919 --> 00:07:09.680
+and delete and so on.
+
+80
+00:07:09.680 --> 00:07:13.550
+It will create a customer’s table in the
+back-end and we're going to use a generator
+
+81
+00:07:13.550 --> 00:07:14.680
+to do that.
+
+82
+00:07:14.680 --> 00:07:16.050
+So that’s what we'll get in to next.
+
