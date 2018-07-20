@@ -1,0 +1,36 @@
+1495121996a:1:{s:11:"contact.htm";a:9:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:525:"title = "Contact"
+url = "/contact"
+layout = "default"
+is_hidden = 0
+==
+<h1>Contact Us</h1>
+<form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control">
+    </div>
+     <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control">
+    </div>
+     <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control"></textarea>
+    </div>
+    <button type="submit">Submit</buton>
+</form>";s:5:"mtime";i:1495044278;s:6:"markup";s:449:"<h1>Contact Us</h1>
+<form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control">
+    </div>
+     <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control">
+    </div>
+     <div class="form-group">
+        <label>Message</label>
+        <textarea class="form-control"></textarea>
+    </div>
+    <button type="submit">Submit</buton>
+</form>";s:4:"code";N;s:5:"title";s:7:"Contact";s:3:"url";s:8:"/contact";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
