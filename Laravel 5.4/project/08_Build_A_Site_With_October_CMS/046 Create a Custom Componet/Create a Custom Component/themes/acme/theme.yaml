@@ -1,0 +1,15 @@
+name: Acme
+description: 'Simple Bootswatch theme'
+author: 'Brad Traversy'
+homepage: 'http://eduonix.com'
+code: ''
+form:
+  fields:
+    site_name:
+      label: Site name
+      comment: The global website name
+      default: Acme
+    site_description:
+      label: Site description
+      comment: The global website description
+      default: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
